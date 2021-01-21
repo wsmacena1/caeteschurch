@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'JJannon';
+    src: local('JJannon Book Italic'), local('JJannon-Book-Italic'),
+        url('JJannon-BookItalic.woff2') format('woff2'),
+        url('JJannon-BookItalic.woff') format('woff'),
+        url('JJannon-BookItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }

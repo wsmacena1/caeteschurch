@@ -1,0 +1,312 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+ margin:0;
+ padding:0;
+ border:0;
+ font:inherit;
+ font-size:100%;
+ vertical-align:baseline
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+ display:block
+}
+
+a{
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #D5D3CF;
+}
+
+nav{
+    height: 50px;
+    /* background: rgba(132, 132, 130, 0.733); */
+    background: rgba(0, 0, 0, 0.03);
+    position: relative;
+    /* box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.4) !important; */
+    /* border-radius: 15px 15px 15px 15px; */
+    margin-top: 10px;
+    /* filter: blur(0.0px); */
+}
+
+nav span a{
+    font-size: 32px;
+    font-style: italic;
+    position: absolute;
+    /* width: 20px; */
+    left: 5%;
+    color: rgb(0, 0, 0);
+
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* nav span a:hover{
+    font-size: 19px; 
+    transition: 0.016s; 
+    color: white;
+} */
+
+nav ul{
+    float: right;
+    margin-right: 25px;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 5px 0 5px;
+    max-width: 100px;
+}
+nav ul li:hover{
+    opacity: 0.5;
+    background-color: rgba(255, 255, 255, 0.616);
+    transition: 0.35s;
+
+}
+
+nav ul li a{
+    position: relative;
+    padding: 5px 0;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* .banner-area{
+    margin-top: -40px;
+    filter: blur(6px);
+    background: linear-gradient(to right,rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    background-image: url(../img/wooden.jpg);
+    -webkit-background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+} */
+
+/* News */
+
+div .news{
+    margin-top: 60px;
+    background-color: white;
+    position: relative;
+    height: 900px;
+    /* box-shadow: 2px 10px 16px 2px rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important; */
+}
+
+/* End News */
+
+.div-about{
+    position: relative;
+}
+
+.div-about-2{
+    background-color: black;
+    color: white;
+}
+
+.div-about-text{
+    text-align: center;
+    padding: 20px 100px 20px 100px;
+    font-style: italic;
+}
+.div-about-text span{
+    font-size: 40px;
+}
+
+/* Footer */
+footer{
+    background-color: rgba(255, 93, 0, 1);
+    max-height: 1020px;
+    position: relative;
+}
+
+footer .row{
+    padding-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+footer span{
+    color: #fff;
+}
+
+/* footer .logo{
+    
+} */
+footer .logo span{
+    font-size: 30px;
+    font-style: italic;
+    color: white;
+}
+
+footer .channel{
+
+    font-style: normal;
+    border-width: 2px;
+    border-style: solid;
+    border-image:
+        linear-gradient(
+            to bottom,
+            white,
+            rgba(0,0,0,0)
+        ) 0 0 0 1;
+}
+footer .channel span{
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+footer .info{
+    font-style: normal;
+    font-size: 14px;
+    border-width: 2px;
+    border-style: solid;
+    border-image:
+        linear-gradient(
+            to bottom,
+            white,
+            rgba(0,0,0,0)
+        ) 0 0 0 1;
+}
+footer .info span{
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+
+
+
+/* End Footer */
+label #sign-one, label #sign-two{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+#res-menu{
+    display: none;
+}
+
+.nav-links{
+    text-align: right;
+    justify-content: flex-end;
+    height: 90%;
+    font-size:2em;
+}
+
+@font-face {
+    font-family: 'JJannon';
+    src: local('JJannon Book Italic'), local('JJannon-Book-Italic'), local('JJannon-BookItalic'),
+        url('../fonts/JJannon-BookItalic/JJannon-BookItalic.woff2') format('woff2'),
+        url('../fonts/JJannon-BookItalic/JJannon-BookItalic.woff') format('woff'),
+        url('../fonts/JJannon-BookItalic/JJannon-BookItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+
+@font-face {
+    font-family: 'Baloo2';
+    src: local('Baloo2'), local('Baloo2'), local('Baloo-2'),
+        url('../fonts/Baloo2/Baloo2-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
