@@ -1,12 +1,32 @@
 @extends('layouts.app')
 @include('layouts._includes.navbar')
 
-
 @section('content')
-    <div class="banner-area">
-    </div>
-    <div class="container news">
-        #   
+    <div class="container">
+        <div class="row">
+            <div class="img-main col-sm-12">
+                <div class="card">
+                    <img src="img/desperta.jpg" alt="" style="width: 100%" class="img-responsive">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="img-main col-sm-4">
+                <div class="card">
+                    <img src="img/tercafeira.jpg" alt="Avatar" style="width: 100%" class="img-responsive">
+                </div>
+            </div>
+            <div class="img-main col-sm-4">
+                <div class="card">
+                    <img src="img/sexta.jpg" alt="" style="width: 100%" class="img-responsive">
+                </div>
+            </div>
+            <div class="img-main col-sm-4">
+                <div class="card">
+                    <img src="img/crux.jpg" alt="" style="width: 100%" class="img-responsive">
+                </div>
+            </div>
+        </div>
     </div>
     <div class="div-about">
         <div class="div-about-1">

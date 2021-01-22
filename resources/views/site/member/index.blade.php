@@ -3,7 +3,7 @@
 
 
 @section('content')
-    <div class="container">
+    <div id="member" class="container">
         <h1>Members</h1>
         <br>
         <div align="right">
@@ -73,3 +73,4 @@
     </script>
 @endsection
 
+@include('layouts._includes.footer')

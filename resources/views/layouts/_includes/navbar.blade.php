@@ -7,10 +7,10 @@
     </label>
     <span><a href="{{ route('site.home.index') }}">ADCaetés</a></span>
     <ul>
-        <li><a href="{{ route('site.home.index') }}">Home</a></li>
-        <li><a href="{{ route('site.member.index') }}">Membros</a></li>
-        <li><a href="#">Filiais</a></li>
-        <li><a href="#">Sobre</a></li>
+        <a href="#"><li>Painel</li></a>
+        <a href="#"><li>Sobre</li></a>
+        <a href="#"><li>Congregações</li></a>
+        <a href="{{ route('site.member.index') }}"><li>Membros</li></a>
     </ul>
 </nav>
 @endsection
