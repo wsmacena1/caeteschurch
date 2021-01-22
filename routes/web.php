@@ -16,8 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::namespace('Site')->group(function(){
+    
     Route::get('/', 'HomeController@index')->name('site.home.index');
     Route::get('/members', 'MemberController@index')->name('site.member.index');
     Route::get('/members/new', 'MemberController@create')->name('site.member.create');
     Route::post('/members/new/store', 'MemberController@store')->name('site.member.store');
+    Route::get('/panel','PanelController@index')->name('site.panel.index');
 });
