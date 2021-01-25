@@ -380,3 +380,33 @@ label #sign-one, label #sign-two{
 div #member{
     min-height: 1000px;
 }
+
+#panel .main {
+    height: 500px;
+    box-shadow: 0 0 5px 1px grey;
+    margin-bottom: 20px;
+}
+
+.sidebar{
+    min-height: 500px;
+    width: 160px;
+    top: 0;
+    left: 0;
+    background-color: #151515;;
+    float: left;
+}
+
+.sidebar a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    
+}
+
+.sidebar a:hover{
+    background-color: white;
+    color: #151515;
+    transition: 0.1s;
+}
