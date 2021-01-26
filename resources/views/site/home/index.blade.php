@@ -50,6 +50,7 @@
             </div>
         </div>
     </div>
+    <h2>Teste</h2>
 @endsection
 
 @include('layouts._includes.footer')

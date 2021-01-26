@@ -23,38 +23,18 @@
 </head>
 <body>
     <div id="app">
-        @yield('navbar')
+        @yield('header')
         <main>
-            @if(Session::has('flash_message'))
-            <div id="mfade" class="container notif">
-                <div class="row">
-                    
-                    <div class="col-md-12 col-md-offset-1">
-                        <div align="center" class="alert {{ Session::get('flash_message')['class'] }}">
-                            {{Session::get('flash_message')['msg']}}
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endif
             @yield('content')
             @yield('footer')
         </main>
     </div>
+{{-- --------------------------------- Scripts --------------------------------}}
     <script>
         setTimeout(function() {
             $('#mfade').fadeOut('slow');
         }, 2000);
     </script>
-
-    {{-- <script>
-        $(function(){
-            $('#money').maskMoney({prefix:'R$ '});
-        })
-    </script> --}}
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -95,8 +75,6 @@
     </script>
     <script src="{{ asset('site/jquery.js') }}" ></script>
     <script src="{{ asset('site/bootstrap.js') }}"></script>
-    {{-- <script src="{{ asset('jquery_mask_plugin/jquery.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('jquery_mask_plugin/jquery.maskMoney.js') }}" type="text/javascript"></script> --}}
     <script src="{{ asset('jquery_mask_plugin/jquery.mask.js') }}" type="text/javascript"></script>
 
     <!-- Fonts -->

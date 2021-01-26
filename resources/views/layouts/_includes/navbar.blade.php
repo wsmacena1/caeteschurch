@@ -1,5 +1,5 @@
-@section('navbar')
-<nav>
+@section('header')
+<header>
     <input type="checkbox" id="res-menu">
     <label for="res-menu">
         <i class="fa fa-bars" id="sign-one"></i>
@@ -12,5 +12,5 @@
         <a href="#"><li>Congregações</li></a>
         <a href="{{ route('site.member.index') }}"><li>Membros</li></a>
     </ul>
-</nav>
+</header>
 @endsection
