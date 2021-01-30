@@ -18,8 +18,8 @@ class MemberController extends Controller
     public function index()
     {
         $member = DB::table('members')
-        ->paginate(5);
-        return view('site.member.index', compact('member') );
+        ->paginate(15);
+        return view('site.panel.member.index')->with('member', $member);
     }
 
     /**
@@ -29,7 +29,7 @@ class MemberController extends Controller
      */
     public function create()
     {
-        return view('site.member.create');
+        return view('site.panel.member.create');
     } 
 
     /**
@@ -48,7 +48,7 @@ class MemberController extends Controller
         $membro->user_id        = null;
         $membro->save();
         // dd($membro);
-        return redirect()->route('site.member.index', $membro->id)->with('alert-success', 'Product updated successfully!');
+        return redirect()->route('site.panel.member.index', $membro->id)->with('alert-success', 'Product updated successfully!');
     }
 
     /**

@@ -18,7 +18,7 @@
             <ul>
                 <li>
                     <a href="https://goo.gl/maps/7zuJzSxb6ECoRces7">
-                        <img style="width: 4%;" src="img/gmaps.png" alt="">
+                        <img style="width: 4%;" src="/img/gmaps.png" alt="">
                         R. João Magalhães, 44 - Bonsucesso
                         Rio de Janeiro - RJ
                         21042-190 
@@ -26,11 +26,11 @@
                 </li>
                 <li>
                     <a href="#">
-                        <img style="width: 4%;" src="img/gmail.png" alt="">
+                        <img style="width: 4%;" src="/img/gmail.png" alt="">
                         mail@caetes.com.br
                     </a>
                 </li>
-                <li hidden>@include('layouts._includes.maps')</li>
+                {{-- <li hidden>@include('layouts._includes.maps')</li> --}}
                 <li></li>
             </ul>
         </div>

@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Roles;
+use App\Models\User;
 
-class RolesSeeder extends Seeder
+class UsersSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,13 +14,13 @@ class RolesSeeder extends Seeder
      */
     public function run()
     {
-        Roles::create([
-            'id'  => md5(uniqid(rand(), true)),
-            'role'    => 'User'       
-            ]);
-        Roles::create([
-            'id'  => md5(uniqid(rand(), true)),
-            'role'    => 'Admin'       
-            ]);
+        // Roles::create([
+        //     'id'  => md5(uniqid(rand(), true)),
+        //     'role'    => 'User'       
+        //     ]);
+        // Roles::create([
+        //     'id'  => md5(uniqid(rand(), true)),
+        //     'role'    => 'Admin'       
+        //     ]);
     }
 }
