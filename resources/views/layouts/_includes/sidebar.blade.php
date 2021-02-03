@@ -35,7 +35,7 @@
     <div class="sidebar-list">
         <ul >
             <li>
-                <a href="#">
+                <a href="{{ route('site.panel.user.index') }}">
                     <i class="fa fa-user"></i>
                     <span>Usuários</span>
                 </a>
@@ -47,7 +47,7 @@
                 </a>
             </li>
             <li>
-                <a href="#about">
+                <a href="{{ route('site.panel.church.index') }}">
                     <i class="fa fa-university"></i>
                     <span>Igreja</span>
                 </a>

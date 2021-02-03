@@ -3,7 +3,10 @@
 namespace Database\Factories;
 
 use App\Models\Member;
+use Brick\Math\BigNumber;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+use IntlChar;
 
 class MemberFactory extends Factory
 {
@@ -22,13 +25,13 @@ class MemberFactory extends Factory
     public function definition()
     {
         return [
-            return [
-                'name' => $this->faker->name,
-                'email' => $this->faker->unique()->safeEmail,
-                'email_verified_at' => now(),
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-                'remember_token' => Str::random(10),
-            ];
+            'name'              => $this->faker->name,
+            'cpf'               => Str::random(11),
+            'rg'                => Str::random(9),
+            'birthday'          => now(),
+            'baptism'           => now(),
+            'address_id'        => 1,
+            'congregation_id'   => 1,
         ];
     }
 }

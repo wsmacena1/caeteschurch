@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Site;
+namespace App\Http\Controllers\Site\Panel\Member;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -10,6 +10,9 @@ use App\Models\Member;
 
 class MemberController extends Controller
 {
+    public function __construct(){
+    	$this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -18,6 +21,9 @@ class MemberController extends Controller
     public function index()
     {
         $member = DB::table('members')
+        ->join('congregations', 'congregations.id', 'members.congregation_id')
+        ->select('members.id', 'members.name', 'members.cpf', 'members.birthday','members.created_at', 'congregations.name as congregation_name')
+        ->distinct()
         ->paginate(15);
         return view('site.panel.member.index')->with('member', $member);
     }
