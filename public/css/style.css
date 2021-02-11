@@ -76,6 +76,7 @@ main{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.089);
     
     padding: 3px;
+    margin-top: 10px;
 }
 /* .card:hover{
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.568);
@@ -337,3 +338,8 @@ div #member{
 
  }
 
+.linha{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, rgb(0, 0, 0), transparent);  
+}

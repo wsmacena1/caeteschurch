@@ -17,6 +17,7 @@ class CreateDepartmentsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', 45);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

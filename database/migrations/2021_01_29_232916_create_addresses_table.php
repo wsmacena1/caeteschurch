@@ -19,10 +19,12 @@ class CreateAddressesTable extends Migration
             $table->string('number', 10);
             $table->string('complement', 45);
             $table->unsignedBigInteger('address_type_id')->nullable();
-            $table->unsignedBigInteger('neighborhood')->nullable();
+            $table->unsignedBigInteger('neighborhood_id')->nullable();
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('address_type_id')->references('id')->on('addresses_type');
+            $table->foreign('neighborhood_id')->references('id')->on('neighborhoods');
         });
     }
 

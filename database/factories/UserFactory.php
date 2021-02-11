@@ -23,11 +23,10 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'email' => 'admin@church.com.br',
-            'password' => 'admin',
+            'email' => 'admin@church.com',
+            'password' => '$2y$10$kAWONnUMmsZEL3ksJfc1SO79hlZ2IuTVLo1qlG8WwzOTUNDsh3KZe',
             'created_at' => now(),
             'updated_at' => now(),
-            'department_id' => 1,
         ];
     }
 }

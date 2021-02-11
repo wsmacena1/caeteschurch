@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Site\Panel\Church;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Church;
 
 class ChurchController extends Controller
 {
@@ -30,7 +31,9 @@ class ChurchController extends Controller
      */
     public function create()
     {  
-        return view('site.panel.church.create');
+        $neighborhood = DB::table('neighborhoods')
+        ->get();
+        return view('site.panel.church.create')->with('neighborhood',$neighborhood);
     }
 
     /**
@@ -41,7 +44,7 @@ class ChurchController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $church = new Church();
     }
 
     /**

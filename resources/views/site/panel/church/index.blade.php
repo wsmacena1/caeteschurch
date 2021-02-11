@@ -3,6 +3,14 @@
 
 
 @section('content')
+    <style>
+        .top{
+            padding: 10px;
+            background: #151515;
+            color: white;
+            font-size: 30px;
+        }
+    </style>
     <div id="panel" class="container">
         @include('layouts._includes.sidebar')
         <div class="main">
@@ -11,7 +19,7 @@
                 <ol class="breadcrumb">
                     <li ><a href="">Home /</a></li>
                     <li ><a href="{{ route('site.panel.index') }}">Panel /</a></li>
-                    <li>Church</li>
+                    <li>Igreja</li>
                 </ol>
             </section>
             

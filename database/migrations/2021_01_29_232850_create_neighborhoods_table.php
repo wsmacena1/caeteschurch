@@ -18,6 +18,7 @@ class CreateNeighborhoodsTable extends Migration
             $table->string('name', 45);
             $table->unsignedBigInteger('city_id')->nullable();
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('city_id')->references('id')->on('cities');
         });

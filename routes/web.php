@@ -36,6 +36,7 @@ Route::namespace('Site')->group(function(){
         Route::namespace('Church')->group(function(){
             Route::get('/panel/churches','ChurchController@index')->name('site.panel.church.index');
             Route::get('/panel/churches/new','ChurchController@create')->name('site.panel.church.create');
+            Route::post('/churches/new/store','ChurchController@store')->name('site.panel.church.store');
         });
     });
 

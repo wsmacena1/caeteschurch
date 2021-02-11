@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Member;
+use App\Models\Address;
 
 
 class MemberController extends Controller
@@ -22,7 +23,14 @@ class MemberController extends Controller
     {
         $member = DB::table('members')
         ->join('congregations', 'congregations.id', 'members.congregation_id')
-        ->select('members.id', 'members.name', 'members.cpf', 'members.birthday','members.created_at', 'congregations.name as congregation_name')
+        ->select(
+            'members.id', 
+            'members.name', 
+            'members.cpf', 
+            'members.birthday',
+            'members.created_at', 
+            'congregations.name as congregation_name',
+            )
         ->distinct()
         ->paginate(15);
         return view('site.panel.member.index')->with('member', $member);
@@ -35,7 +43,9 @@ class MemberController extends Controller
      */
     public function create()
     {
-        return view('site.panel.member.create');
+        $neighborhood = DB::table('neighborhoods')
+        ->get();
+        return view('site.panel.member.create')->with('neighborhood',$neighborhood);
     } 
 
     /**
@@ -52,9 +62,17 @@ class MemberController extends Controller
         $membro->birthday       = $request->birthday;
         $membro->member_type    = null;
         $membro->user_id        = null;
-        $membro->save();
-        // dd($membro);
-        return redirect()->route('site.panel.member.index', $membro->id)->with('alert-success', 'Product updated successfully!');
+        if($membro->save()){
+            $address = new Address();
+            $address->address           = $request->address;
+            $address->number            = $request->number;
+            $address->complement        = $request->complement;
+            $address->neighborhood_id   = $request->neighborhood_id;
+            $address->address           = $request->address;
+            $address->address_type      = 1;
+            
+            return redirect()->route('site.panel.member.index', $membro->id)->with('alert-success', 'Product updated successfully!');
+        }
     }
 
     /**

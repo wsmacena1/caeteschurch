@@ -30,8 +30,10 @@ class MemberFactory extends Factory
             'rg'                => Str::random(9),
             'birthday'          => now(),
             'baptism'           => now(),
-            'address_id'        => 1,
-            'congregation_id'   => 1,
+            'email'             => $this->faker->email,
+            'created_at'        => $this->faker->dateTime,
+            'updated_at'        => $this->faker->dateTime,
+            'deleted_at'        => null,
         ];
     }
 }

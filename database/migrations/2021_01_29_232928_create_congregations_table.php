@@ -17,8 +17,11 @@ class CreateCongregationsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('address_id')->nullable();
             $table->string('name', 45);
+            $table->string('contact', 15);
+            $table->date('emancipation_date');
             $table->unsignedBigInteger('sector')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
