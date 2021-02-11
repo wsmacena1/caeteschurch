@@ -15,9 +15,9 @@ class CreateCongregationsTable extends Migration
     {
         Schema::create('congregations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('address_id');
+            $table->unsignedBigInteger('address_id')->nullable();
             $table->string('name', 45);
-            $table->smallInteger('sector',5);
+            $table->unsignedBigInteger('sector')->nullable();
             $table->timestamps();
         });
     }

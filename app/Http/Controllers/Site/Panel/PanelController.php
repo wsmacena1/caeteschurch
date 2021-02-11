@@ -17,8 +17,7 @@ class PanelController extends Controller
      */
     public function index()
     {
-        $panel = 1;
-        return view('site.panel.index',compact('panel'));
+        return view('site.panel.index');
     }
 
     /**

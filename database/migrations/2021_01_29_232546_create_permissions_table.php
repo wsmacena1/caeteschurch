@@ -13,16 +13,16 @@ class CreatePermissionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('permissions', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('key');
-            $table->unsignedBigInteger('department_id');
-            $table->unsignedBigInteger('user_id');
-            $table->timestamps();
+        // Schema::create('permissions', function (Blueprint $table) {
+        //     $table->bigIncrements('id');
+        //     $table->string('key');
+        //     $table->unsignedBigInteger('department_id')->nullable();
+        //     $table->unsignedBigInteger('user_id')->nullable();
+        //     $table->timestamps();
 
-            $table->foreign('department_id')->references('id')->on('departments');
-            $table->foreign('user_id')->references('id')->on('users');
-        });
+        //     $table->foreign('department_id')->references('id')->on('departments');
+        //     $table->foreign('user_id')->references('id')->on('users');
+        // });
     }
 
     /**

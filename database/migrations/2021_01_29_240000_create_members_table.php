@@ -20,9 +20,9 @@ class CreateMembersTable extends Migration
             $table->string('rg', 12);
             $table->dateTime('birthday');
             $table->dateTime('baptism');
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('address_id');
-            $table->unsignedBigInteger('congregation_id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('address_id')->nullable();
+            $table->unsignedBigInteger('congregation_id')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

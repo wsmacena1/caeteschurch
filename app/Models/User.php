@@ -3,7 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Console\DbCommand;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Events\QueryExecuted;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -19,11 +21,21 @@ class User extends Authenticatable
 
      
     public $timestamps = false;
+
+    public function roles() 
+    {
+        return $this->hasOne(User::class, 'id');
+    }
+
+    public function isAdmin() 
+    {
+       return $this->roles()->where('role_id', 1)->first();
+    }
     
     protected $fillable = [
         'email',
         'password',
-        'active',
+        'department_id',
     ];
 
     /**
@@ -42,6 +54,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        // 'email_verified_at' => 'datetime',
     ];
+
+    
 }

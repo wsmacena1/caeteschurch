@@ -28,18 +28,25 @@
         <div class="img-avatar">
             <img src="/img/avatar.jpg" alt="">
         </div>
+        <div class="w-user" align="center">
+            <p>Bem Vindo</p>
+            <span>{{ Auth::user()->email }}</span>  
+        </div>
         <div class="w-user">
-            Welcome Willians    
+            
         </div>
     </div>
     <div class="sidebar-list">
-        <ul >
+        <ul style="margin-top: 50px">
+            @if(auth()->User()->isAdmin())
             <li>
                 <a href="{{ route('site.panel.user.index') }}">
                     <i class="fa fa-user"></i>
                     <span>Usuários</span>
                 </a>
             </li>
+            @endif
+                
             <li>
                 <a href="{{ route('site.panel.member.index') }}">
                     <i class="fa fa-users"></i>

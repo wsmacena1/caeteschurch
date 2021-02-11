@@ -18,11 +18,11 @@ class CreateAddressesTable extends Migration
             $table->string('address');
             $table->string('number', 10);
             $table->string('complement', 45);
-            $table->unsignedBigInteger('address_type_id');
-            $table->unsignedBigInteger('neighborhood');
+            $table->unsignedBigInteger('address_type_id')->nullable();
+            $table->unsignedBigInteger('neighborhood')->nullable();
             $table->timestamps();
 
-            $table->foreign('address_type_id')->references('id')->on('address_type');
+            $table->foreign('address_type_id')->references('id')->on('addresses_type');
         });
     }
 

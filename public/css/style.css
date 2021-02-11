@@ -40,7 +40,7 @@ header{
         clear: both;
     }
     header ul a:hover{
-        color: black;
+        color: white;
         opacity: 1;
     }
         header ul li{
@@ -53,8 +53,8 @@ header{
             header ul li:hover{
                 opacity: 0.9;
                 transition: 0.05s;
-                color: black;
-                background: white;
+                /* color: black;
+                background: white; */
             }
                 header ul li a{
                     position: relative;
@@ -237,6 +237,8 @@ div #member{
     padding-left: 0;
     /* visibility: hidden; */
     overflow: hidden;
+    max-width: 240px;
+    border-radius: 20px 0 0 20px;
 }
 .sidebar ul{
     padding-left: 0;
@@ -265,6 +267,7 @@ div #member{
     margin-bottom: 20px;
     max-width: 80%;
     padding-left: 0;
+    border-radius: 20px;
 }
 #panel .main table{
     font-family: Arial, Helvetica, sans-serif;
@@ -285,7 +288,7 @@ div #member{
 
 #panel .main{
     position: relative;
-    margin-left: 206.2px;
+    margin-left: 228.2px;
     padding-left: 20px;
 }
 
@@ -333,3 +336,4 @@ div #member{
     z-index: 9999;
 
  }
+

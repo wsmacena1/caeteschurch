@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Auth::routes();
 
 Route::get('/', 'AuthController@dashboard')->name('auth.login');
